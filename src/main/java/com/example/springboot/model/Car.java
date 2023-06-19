@@ -1,20 +1,30 @@
 package com.example.springboot.model;
 
-public abstract class Car  {
-	private Integer id;
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "TB_CAR")
+public class Car {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	private String plate;
 	private String color;
 	
 	public Car() {
-		
 	}
-	
-	public Car(Integer id, String plate, String color) {
+	public Car(Long id, String plate, String color) {
+		super();
+		this.id = id;
 		this.plate = plate;
 		this.color = color;
-		this.id = id;
 	}
-	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = this.id;
+	}
 	public String getPlate() {
 		return plate;
 	}
@@ -28,8 +38,7 @@ public abstract class Car  {
 		this.color = color;
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
+	
+	
+	
 }
