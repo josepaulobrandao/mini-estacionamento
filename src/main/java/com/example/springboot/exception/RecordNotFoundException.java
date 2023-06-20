@@ -1,8 +1,10 @@
 package com.example.springboot.exception;
 
 public class RecordNotFoundException extends RuntimeException {
-    public RecordNotFoundException(Long id){
-        super("Could not find record " + id);
+	private static final long serialVersionUID = 1L;
+
+	public RecordNotFoundException(String string){
+        super("Could not find record " + string);
 
     }
 }

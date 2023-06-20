@@ -1,15 +1,16 @@
 package com.example.springboot.service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Service;
+
 import com.example.springboot.Mapper.CarMapper;
 import com.example.springboot.exception.RecordNotFoundException;
 import com.example.springboot.model.Car;
 import com.example.springboot.repositories.CarRepository;
 import com.example.springboot.service.dto.CarDTO;
 import com.example.springboot.service.dto.CarRequestDTO;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class CarService {
@@ -30,12 +31,20 @@ public class CarService {
 	}
 
 	public CarDTO getById(Long id) {
-		return carRepository.findById(Math.toIntExact(id))
+		return carRepository.findById(id)
 							.map(carMapper::toDTO)
-							.orElseThrow(() -> new RecordNotFoundException(id));
+							.orElseThrow(() -> new RecordNotFoundException("Car not exist with id :"  + id));
 	}
 	public CarDTO create (CarRequestDTO carDTO){
 		Car car = carMapper.toModel(carDTO);
 		return carMapper.toDTO(carRepository.save(car));
 	}
+	
+	public CarDTO updateCarService(Long id, CarRequestDTO carRequestDTO) {
+		
+		
+		return null;
+	}
+	
+	
 }

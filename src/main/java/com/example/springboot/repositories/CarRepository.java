@@ -6,7 +6,7 @@ import com.example.springboot.model.Car;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CarRepository extends JpaRepository<Car, Integer> {
+public interface CarRepository extends JpaRepository<Car, Long> {
 
 
 
