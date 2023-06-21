@@ -1,6 +1,8 @@
 package com.example.springboot.service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
@@ -23,6 +25,16 @@ public class CarService {
 		this.carMapper = carMapper;
 	}
 
+	public CarDTO getById(Long id) {
+		return carRepository.findById(id)
+							.map(carMapper::toDTO)
+							.orElseThrow(() -> new RecordNotFoundException("Car not exist with id :"  + id));
+	}
+
+	public CarDTO create (CarRequestDTO carDTO){
+		Car car = carMapper.toModel(carDTO);
+		return carMapper.toDTO(carRepository.save(car));
+	}
 	public List<CarDTO> list() {
 		return carRepository.findAll()
 				.stream()
@@ -30,20 +42,13 @@ public class CarService {
 				.collect(Collectors.toList());
 	}
 
-	public CarDTO getById(Long id) {
-		return carRepository.findById(id)
-							.map(carMapper::toDTO)
-							.orElseThrow(() -> new RecordNotFoundException("Car not exist with id :"  + id));
-	}
-	public CarDTO create (CarRequestDTO carDTO){
-		Car car = carMapper.toModel(carDTO);
-		return carMapper.toDTO(carRepository.save(car));
-	}
-	
-	public CarDTO updateCarService(Long id, CarRequestDTO carRequestDTO) {
-		
-		
-		return null;
+	public CarDTO updateCarService(Long id, CarRequestDTO dto) {
+		Car car = carRepository.findById(id).orElseThrow(() -> new RecordNotFoundException("Car not exist with id :" + id));
+		car.setId(dto.id());
+		car.setPlate(dto.plate());
+		car.setColor(dto.color());
+		Car carUpdate = carRepository.save(car);
+		return carMapper.toDTO(carUpdate);
 	}
 	
 	

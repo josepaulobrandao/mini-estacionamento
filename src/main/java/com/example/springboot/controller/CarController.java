@@ -52,23 +52,11 @@ public class CarController {
 	public CarDTO create(@RequestBody CarRequestDTO carDTO) {
 		return carService.create(carDTO);
 	}
-	
-	@PutMapping
-	@ResponseStatus(code = HttpStatus.CREATED)
-	public CarDTO update(@PathVariable Long id, CarDTO dto ) {
-		
-		return null;
-	}
 
     @PutMapping("/users/{id}")
 	@ResponseStatus(code = HttpStatus.CREATED)
-    public ResponseEntity<CarDTO> updateCar(@PathVariable Long id, @RequestBody CarRequestDTO dto) {
-        Car car = carRepository.findById(id).orElseThrow(() -> new RecordNotFoundException("Car not exist with id :" + id));
-        car.setId(dto.id());
-        car.setPlate(dto.plate());
-        car.setColor(dto.color());
-        Car carUpdate = carRepository.save(car);
-        return ResponseEntity.ok(carMapper.toDTO(carUpdate));
+    public CarDTO updateCar(@PathVariable Long id, @RequestBody CarRequestDTO dto) {
+    	return carService.updateCarService(id, dto);
     }
 
 
