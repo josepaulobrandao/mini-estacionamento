@@ -14,7 +14,6 @@ public class CarMapper {
 
     public Car toModel (CarRequestDTO carDTO){
             Car car = new Car();
-            car.setId(carDTO.id());
             car.setPlate(carDTO.plate());
             car.setColor(carDTO.color());
             return  car;

@@ -1,18 +1,15 @@
 package com.example.springboot.service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
-import org.springframework.stereotype.Service;
-
 import com.example.springboot.Mapper.CarMapper;
 import com.example.springboot.exception.RecordNotFoundException;
 import com.example.springboot.model.Car;
 import com.example.springboot.repositories.CarRepository;
 import com.example.springboot.service.dto.CarDTO;
 import com.example.springboot.service.dto.CarRequestDTO;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CarService {

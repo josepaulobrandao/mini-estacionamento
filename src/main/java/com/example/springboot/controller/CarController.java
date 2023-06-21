@@ -35,7 +35,7 @@ public class CarController {
 		this.carService = carService;
 	}
 
-	@GetMapping("list")
+	@GetMapping
 	@ResponseStatus(code = HttpStatus.OK)
 	public List<CarDTO> findAll () {
 		return carService.list();
@@ -53,7 +53,7 @@ public class CarController {
 		return carService.create(carDTO);
 	}
 
-    @PutMapping("/users/{id}")
+    @PutMapping("/update/{id}")
 	@ResponseStatus(code = HttpStatus.CREATED)
     public CarDTO updateCar(@PathVariable Long id, @RequestBody CarRequestDTO dto) {
     	return carService.updateCarService(id, dto);
