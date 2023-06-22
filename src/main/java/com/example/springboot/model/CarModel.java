@@ -13,7 +13,11 @@ public class CarModel {
         this.category = category;
     }
 
-
+    public CarModel(Long id, String manufacturer, String category) {
+        this.id = id;
+        this.manufacturer = manufacturer;
+        this.category = category;
+    }
 
     public String getManufacturer() {
         return manufacturer;
@@ -29,5 +33,13 @@ public class CarModel {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
