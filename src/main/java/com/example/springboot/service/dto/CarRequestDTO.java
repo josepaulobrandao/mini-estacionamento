@@ -1,12 +1,11 @@
 package com.example.springboot.service.dto;
 
-<<<<<<< HEAD
+
 import java.time.LocalDateTime;
-=======
+
 import com.example.springboot.model.CarModel;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.NotBlank;
->>>>>>> 7a05fe391fd540edabef1c292d7939ef72991cf7
 
 import org.springframework.data.annotation.CreatedDate;
 
