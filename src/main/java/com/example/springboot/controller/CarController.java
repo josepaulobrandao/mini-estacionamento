@@ -3,7 +3,10 @@ package com.example.springboot.controller;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.DeleteMapping;
+=======
+>>>>>>> 7a05fe391fd540edabef1c292d7939ef72991cf7
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +23,10 @@ import com.example.springboot.service.dto.CarDTO;
 import com.example.springboot.service.dto.CarRequestDTO;
 
 import jakarta.validation.Valid;
+<<<<<<< HEAD
 import jakarta.validation.constraints.NotNull;
+=======
+>>>>>>> 7a05fe391fd540edabef1c292d7939ef72991cf7
 
 @RestController
 @RequestMapping("/api/v1/car")

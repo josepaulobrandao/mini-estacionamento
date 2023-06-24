@@ -1,6 +1,10 @@
 package com.example.springboot.service.dto;
 
+<<<<<<< HEAD
 import java.time.LocalDateTime;
+=======
+public record CarDTO (Long id, String plate, String color) {
+>>>>>>> 7a05fe391fd540edabef1c292d7939ef72991cf7
 
 import org.springframework.data.annotation.CreatedDate;
 

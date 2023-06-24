@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import org.springframework.stereotype.Service;
 
 import com.example.springboot.model.Car;
+import com.example.springboot.model.CarModel;
 import com.example.springboot.service.dto.CarDTO;
 import com.example.springboot.service.dto.CarRequestDTO;
 
