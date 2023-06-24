@@ -1,6 +1,9 @@
 package com.example.springboot.service.dto;
 
 <<<<<<< HEAD
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.data.annotation.CreatedDate;
+
 import java.time.LocalDateTime;
 =======
 public record CarDTO (Long id, String plate, String color) {

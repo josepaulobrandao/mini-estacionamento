@@ -70,7 +70,7 @@ public class Car {
 		this.manufacturer = manufacturer;
 	}
 
-<<<<<<< HEAD
+
 	public String getCategory() {
 		return category;
 	}
@@ -96,7 +96,5 @@ public class Car {
 		this.ticket = ticket;
 	}
 
-=======
->>>>>>> 7a05fe391fd540edabef1c292d7939ef72991cf7
 
 }
