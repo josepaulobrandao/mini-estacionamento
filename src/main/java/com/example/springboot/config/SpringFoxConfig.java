@@ -10,6 +10,8 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
+import java.util.Collections;
+
 @Configuration
 public class SpringFoxConfig {
     @Bean
@@ -21,16 +23,13 @@ public class SpringFoxConfig {
                 .build();
     }
     private ApiInfo apiInfo () {
-        return  new ApiInfoBuilder()
-                .title("API")
-                .description("Service API - Parking System")
-                .termsOfServiceUrl("http://springfox.io")
-                .contact(new Contact("springfox",
-                                     "https://github.com/josepaulobrandao/parking-system",
-                                     "jose.dev2301@gmailcom"))
-                .license("Apache License Version 2.0")
-                .licenseUrl("https://github.com/josepaulobrandao/parking-system")
-                .version("2.0")
-                .build();
+        return  new ApiInfo(
+                "My REST API",
+                "Service API - Parking System.",
+                "API TOS",
+                "Terms of service",
+                new Contact("José Paulo", "https://github.com/josepaulobrandao/parking-system", "jose.dev2301@gmail.com"),
+                "License of API", "http://springfox.io", Collections.emptyList());
+
     }
 }
