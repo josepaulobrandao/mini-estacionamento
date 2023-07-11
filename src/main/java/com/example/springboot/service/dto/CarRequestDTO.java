@@ -25,7 +25,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CarRequestDTO {
-	
+
+        @JsonIgnoreProperties
         private Long id;
         private Ticket ticket;
         private @NotBlank String plate;

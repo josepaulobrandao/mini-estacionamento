@@ -2,6 +2,7 @@ package com.example.springboot.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -22,7 +23,7 @@ public class SpringFoxConfig {
                 .paths(PathSelectors.any())
                 .build();
     }
-    private ApiInfo apiInfo () {
+    public ApiInfo apiInfo () {
         return  new ApiInfo(
                 "My REST API",
                 "Service API - Parking System.",
@@ -31,5 +32,9 @@ public class SpringFoxConfig {
                 new Contact("José Paulo", "https://github.com/josepaulobrandao/parking-system", "jose.dev2301@gmail.com"),
                 "License of API", "http://springfox.io", Collections.emptyList());
 
+    }
+
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addRedirectViewController("/myproject", "/swagger-ui-custom.html");
     }
 }
