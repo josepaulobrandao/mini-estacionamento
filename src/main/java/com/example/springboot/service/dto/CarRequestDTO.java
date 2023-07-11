@@ -3,14 +3,11 @@ package com.example.springboot.service.dto;
 
 import java.time.LocalDateTime;
 
-import com.example.springboot.model.CarModel;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.validation.constraints.NotBlank;
-
 import org.springframework.data.annotation.CreatedDate;
 
 import com.example.springboot.service.business.Ticket;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
