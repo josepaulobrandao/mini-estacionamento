@@ -10,7 +10,7 @@ Parkgin System é uma aplicação back-end que tem por objetivo gerenciar um est
 - Maven
 - Banco de dados PostgreSQL e H2
 
-# Funcionalistades
+# Funcionalidades
 
 - Listar,cadastrar, deletar,atualizar veiculos previamente cadastrados
 - Geração de protocolo/ticket
