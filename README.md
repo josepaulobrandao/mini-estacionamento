@@ -14,7 +14,7 @@ Parkgin System é uma aplicação back-end que tem por objetivo gerenciar um est
 # Funcionalidades
 
 - Listar,cadastrar, deletar,atualizar veiculos previamente cadastrados
-- Geração de ticket
+- Geração de tickets
 - Gestão de tabela de preço, aplicando taxa de acordo com a variação da hora e dia da semana
    
 
