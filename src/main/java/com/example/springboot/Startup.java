@@ -8,9 +8,13 @@ import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Contact;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.info.License;
 
 
-@SpringBootApplication
+
 @OpenAPIDefinition(info = @Info(title = "Parking System API",
 description = "API para gerenciamento de estacionamento",
 version = "1.0",
@@ -24,6 +28,8 @@ license = @License(
         url = "https://springdoc.org/"
 )
 ))
+
+@SpringBootApplication
 public class Startup {
 
 	public static void main(String[] args) {
